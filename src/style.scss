@@ -225,6 +225,63 @@
                 background-color: #ddddf7;
                 padding: 10px;
                 height: calc(100% - 140px);
+                overflow: scroll;
+
+                .message{
+                    display: flex;
+                    gap: 20px;
+                    margin-bottom: 15px;
+
+
+                    .message-info{
+                        display: flex;
+                        flex-direction: column;
+                        color: gray;
+                        font-weight: 300;
+
+                        img{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .meaasge-content{
+                        width: 40%;
+                        max-width: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        p{
+                            background-color: white;
+                            padding: 10px 20px;
+                            border-radius: 0px 10px 10px 10px;
+                            max-width: max-content;
+                        }
+                        img{
+                            width: 60%;
+                        }
+                    }
+
+                    &.owner{
+                        flex-direction: row-reverse;
+
+                        .meaasge-content{
+                            align-items: flex-end;
+                            p{
+                                background-color: lightblue;
+                                color: white;
+                            }
+                        }
+
+
+
+                    }
+                }
+
+
             }
 
             .input-i{
@@ -236,6 +293,7 @@
                 background-color: white;
                 padding: 10px;
                 color: black;
+                overflow: hidden;
                 input{
                     border: none;
                     height: 60px;
